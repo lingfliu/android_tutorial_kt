@@ -5,7 +5,9 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.view.KeyEvent
 import android.view.View
+import android.view.View.OnKeyListener
 import android.widget.*
 import android.widget.CompoundButton.INVISIBLE
 import android.widget.CompoundButton.OnCheckedChangeListener
@@ -32,6 +34,21 @@ class DemoActivity: Activity() {
         setContentView(binding.root)
 //        cnt = binding.cnt
         btn = binding.btnSelect
+        txt = binding.txtCnt
+
+        binding.edit.setOnKeyListener(object: OnKeyListener{
+            override fun onKey(v: View?, keyCode: Int, event: KeyEvent?): Boolean {
+                TODO("Not yet implemented")
+                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                    //TODO: 结束编辑
+                } else {
+                    //继续编辑
+                    //
+                }
+            }
+
+        })
+
 
         btn.setOnClickListener{
             var c = binding.cnt ?: 0
@@ -39,6 +56,8 @@ class DemoActivity: Activity() {
             binding.cnt = c
             txt.text = "" + c
             Log.i("main", "cnt = " + c)
+
+            binding.edit.text
         }
 
         txt = binding.txtCnt
