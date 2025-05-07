@@ -16,8 +16,8 @@ class ClickCount(cnt:Int):BaseObservable() {
             notifyChange()
         }
 
-    init {
+//    init {
 //        this.cnt = cnt
-    }
+//    }
 
 }

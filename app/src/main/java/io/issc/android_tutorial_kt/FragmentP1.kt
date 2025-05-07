@@ -1,11 +1,10 @@
-package io.issc.android_dev_tutorial_kt
+package io.issc.android_tutorial_kt
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import io.issc.android_tutorial_kt.databinding.FragmentP1Binding
 

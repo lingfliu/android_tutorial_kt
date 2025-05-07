@@ -1,4 +1,4 @@
-package io.issc.android_dev_tutorial_kt
+package io.issc.android_tutorial_kt
 
 import android.os.Bundle
 import android.view.LayoutInflater

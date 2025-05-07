@@ -30,7 +30,7 @@ class PagerActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPagerBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.clickCount = clickCount
+//        binding.clickCount = clickCount
 
         tab = binding.tabs
 
