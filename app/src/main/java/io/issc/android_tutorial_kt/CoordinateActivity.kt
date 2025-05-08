@@ -53,14 +53,15 @@ class CoordinateActivity : AppCompatActivity() {
 
         val listView = binding.listView
 
+        dataMock1()
         listAdapter = ListAdapter(contactList)
 
         listView.adapter = listAdapter
         listView.layoutManager = LinearLayoutManager(this, VERTICAL, false)
 
-        listAdapter.notifyDataSetChanged()
+//        dataMock2()
+//        listAdapter.notifyDataSetChanged()
 
-        dataMock()
         listAdapter.opListener = object:OnOpListener{
             override fun onRemove(data: Contact) {
                 Log.d("main", "removing " + data.toString())
@@ -109,10 +110,17 @@ class CoordinateActivity : AppCompatActivity() {
 
     }
 
-    fun dataMock() {
-        for (i in 1..30) {
+    fun dataMock1() {
+        for (i in 1..20) {
             contactList.add(Contact("Alice"+i.toString(), i.toString()))
-            listAdapter.notifyItemInserted(contactList.size-1)
+//            listAdapter.notifyItemInserted(contactList.size-1)
+        }
+    }
+
+    fun dataMock2() {
+        for (i in 3..30) {
+            contactList.add(Contact("Alice"+i.toString(), i.toString()))
+//            listAdapter.notifyItemInserted(contactList.size-1)
         }
     }
 

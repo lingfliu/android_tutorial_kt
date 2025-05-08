@@ -51,7 +51,7 @@ class PagerActivity : FragmentActivity() {
                 if (position == 0) {
                     val frag = FragmentP1()
                     frag.cb = object:FragmentP1.Callback{
-                        override fun onRequestPage3() {
+                            override fun onRequestPage3() {
                             pager.currentItem = 2
                         }
                     }

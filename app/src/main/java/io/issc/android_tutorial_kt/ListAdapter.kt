@@ -46,7 +46,6 @@ class ListAdapter(val dataList: List<Contact>): RecyclerView.Adapter<ListAdapter
                     distanceX: Float,
                     distanceY: Float
                 ): Boolean {
-                    TODO("Not yet implemented")
                     return true
                 }
 

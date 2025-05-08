@@ -12,15 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RatingBar
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:max="5"
-            android:progress="3"
-            android:id="@+id/ratingbar"/>
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="4dp"
+            android:layout_height="wrap_content">
+            <RatingBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:max="5"
+                android:progress="2"
+                android:id="@+id/ratingbar"/>
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,6 +73,14 @@
             android:scaleType="centerCrop"
             android:alpha="0.8"
             android:id="@+id/img"
+            />
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/toggle"
+            android:hint="yes"
             />
         <Switch
             android:layout_width="64dp"
@@ -106,6 +129,11 @@
                 android:textSize="28sp"
                 />
         </RadioGroup>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/seekbar"
+            android:id="@+id/progress"/>
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -117,6 +145,82 @@
             android:thumbTint="@color/orange"
             android:progressTint="@color/black"
             />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/edit"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="159dp" />
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/edit"
+            />
+
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btn_select"
+            app:layout_constraintTop_toBottomOf="@+id/textClock"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            app:layout_constraintTop_toBottomOf="@+id/calendar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/time">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

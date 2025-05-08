@@ -2,6 +2,7 @@ package io.issc.android_tutorial_kt
 
 import android.content.Context
 import android.content.DialogInterface
+import android.content.DialogInterface.OnCancelListener
 import android.content.DialogInterface.OnClickListener
 import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
@@ -36,6 +37,8 @@ class ComplexComponentActivity : AppCompatActivity() {
         selectList.add("1")
         selectList.add("2")
         selectList.add("3")
+        selectList.add("4")
+        selectList.add("5")
         spinner.adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, selectList)
 
         spinner.onItemSelectedListener = object:OnItemSelectedListener{
@@ -74,6 +77,28 @@ class ComplexComponentActivity : AppCompatActivity() {
         }
         dialog = dialogBuilder.setView(layout).create()
         dialog?.show()
+
+//        dialog = dialogBuilder.setTitle("对话框").setMessage("测试").setPositiveButton("是", object:OnClickListener{
+//            override fun onClick(dialog: DialogInterface?, which: Int) {
+//                dialog?.dismiss()
+//            }
+//        })
+//            .setNegativeButton("否", object:OnClickListener{
+//                override fun onClick(dialog: DialogInterface?, which: Int) {
+//                    dialog?.dismiss()
+//                }
+//            })
+//            .setNeutralButton("不知道", object:OnClickListener{
+//                override fun onClick(dialog: DialogInterface?, which: Int) {
+//                    dialog?.dismiss()
+//                }
+//            })
+//            .setOnCancelListener(object:OnCancelListener{
+//                override fun onCancel(dialog: DialogInterface?) {
+//                }
+//            })
+//            .create()
+//        dialog?.show()
 
 
         webView = binding.web
