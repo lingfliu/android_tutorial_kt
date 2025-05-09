@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <io.issc.android_tutorial_kt.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/icon_text"
+            android:layout_marginVertical="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:title="TITLE"
+            app:iconSrc="@mipmap/ic_launcher"
+            />
+
+        <io.issc.android_tutorial_kt.ArcView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/arc"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/icon_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:startAngle="0"
+            app:endAngle="180"
+            />
+
+        <io.issc.android_tutorial_kt.ArcSurfView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/arc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/arcSurf"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/arcSurf"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/btn"
+            android:text="Button"
+            />
+        <io.issc.android_tutorial_kt.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="24dp"
+            app:layout_constraintTop_toBottomOf="@id/btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:title="TITLE"
+            app:iconSrc="@mipmap/ic_launcher"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
