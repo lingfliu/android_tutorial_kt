@@ -7,8 +7,8 @@ import android.os.Environment
 import android.util.Log
 import android.widget.*
 import androidx.room.Room
-import io.issc.android_dev_tutorial_kt.model.AppDatabase
-import io.issc.android_dev_tutorial_kt.model.UserInfo
+import io.issc.android_tutorial_kt.model.AppDatabase
+import io.issc.android_tutorial_kt.model.UserInfo
 import io.issc.android_tutorial_kt.databinding.ActivityIoBinding
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch

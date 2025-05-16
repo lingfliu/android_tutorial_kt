@@ -72,30 +72,37 @@ class NaviActivity : FragmentActivity() {
                 controller.navigate(R.id.action_frgNav1_to_frgNav3)
             }
         }
-//
-//        val caller = registerForActivityResult(
-//            ActivityResultContracts.StartActivityForResult()
-//        ) { result ->
-//            if (result.resultCode == 1) {
-//                val data: Int = result.data?.getIntExtra("cnt", 0) ?: 0
-//                Toast.makeText(this, "cnt = $data", Toast.LENGTH_SHORT).show()
-//            }
-//        }
-//
-////        //新的页面启动并返回结果使用示例
-//        binding.btnFrg1.setOnClickListener {
-//            var intent = Intent(this, CalledActivity::class.java)
-//            intent.putExtra("cnt", cnt)
-//            caller.launch(intent)
-//
-////            var bundle = bundleOf("cnt" to cnt, "key" to "Hello from NaviActivity")
-//
-////            intent.putExtra("bundle", bundle)
-//
-////            startActivity(intent, bundle)
-////            startActivity(intent)
-////            startActivityForResult(intent, 1)
-//        }
+
+        val caller = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == 1) {
+                val data: Int = result.data?.getIntExtra("cnt", 0) ?: 0
+                Toast.makeText(this, "cnt = $data", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+//        //新的页面启动并返回结果使用示例
+        binding.btnFrg1.setOnClickListener {
+
+            intent.putExtra("cnt", cnt)
+            caller.launch(intent)
+
+
+            intent.putExtra("param", 1)
+            var bundle1 = Bundle()
+            bundle1.putInt("key1", 0)
+            intent.putExtra("paramBundle", bundle1)
+            startActivity(intent)
+
+            var bundle = bundleOf("cnt" to cnt, "key" to "Hello from NaviActivity")
+
+            intent.putExtra("bundle", bundle)
+
+//            startActivity(intent, bundle)
+
+//            startActivityForResult(intent, 1)
+        }
 
     }
 

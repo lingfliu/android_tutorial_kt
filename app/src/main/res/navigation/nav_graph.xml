@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/frgNav1"
-        android:name="Fr"
+        android:name="io.issc.android_tutorial_kt.FragmentP1"
         android:label="FrgNav1" >
         <action
             android:id="@+id/action_frgNav1_to_frgNav2"

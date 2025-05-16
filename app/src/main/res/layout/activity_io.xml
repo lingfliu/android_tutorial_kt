@@ -6,7 +6,7 @@
     <data>
         <variable
             name="clickCount"
-            type="io.issc.android_dev_tutorial_kt.ClickCount" />
+            type="io.issc.android_tutorial_kt.ClickCount" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

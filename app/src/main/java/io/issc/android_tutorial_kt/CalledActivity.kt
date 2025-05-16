@@ -21,6 +21,7 @@ class CalledActivity : AppCompatActivity() {
         binding = ActivityCalledBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         intent.extras?.let {
             val cnt = it.getInt("cnt")
             Toast.makeText(this, "cnt = $cnt", Toast.LENGTH_SHORT).show()
@@ -31,6 +32,7 @@ class CalledActivity : AppCompatActivity() {
 
         btnBack = binding.btnBack
 
+
         //get request code
 //        var requestCode = intent.getIntExtra("requestCode", 0)
 
@@ -39,7 +41,6 @@ class CalledActivity : AppCompatActivity() {
             intent.putExtra("cnt", 10)
 
             setResult(1, intent)
-
 
             finish()
         }
