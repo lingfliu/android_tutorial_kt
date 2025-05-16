@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.fragment.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -65,4 +66,18 @@ dependencies {
     implementation(libs.androidx.appcompat)
 
     implementation(libs.material)
+
+    val nav_version = "2.9.0"
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui.ktx)
+
+
+    val room_version = "2.7.1"
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.compiler)
+    annotationProcessor(libs.androidx.room.compiler)
+
+    implementation("io.ktor:ktor-client-android:1.6.6")
+    implementation("io.ktor:ktor-client-gson:1.6.6")
 }

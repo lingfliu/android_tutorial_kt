@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/frgNav1">
+
+    <fragment
+        android:id="@+id/frgNav1"
+        android:name="Fr"
+        android:label="FrgNav1" >
+        <action
+            android:id="@+id/action_frgNav1_to_frgNav2"
+            app:destination="@id/frgNav2"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_frgNav1_to_frgNav3"
+            app:destination="@id/frgNav3" />
+        <action
+            android:id="@+id/action_frgNav1_self"
+            app:destination="@id/frgNav1" />
+    </fragment>
+    <fragment
+        android:id="@+id/frgNav2"
+        android:name="io.issc.android_tutorial_kt.FrgNav2"
+        android:label="FrgNav2" >
+        <action
+            android:id="@+id/action_frgNav2_to_frgNav1"
+            app:destination="@id/frgNav1" />
+        <action
+            android:id="@+id/action_frgNav2_to_frgNav3"
+            app:destination="@id/frgNav3" />
+    </fragment>
+    <fragment
+        android:id="@+id/frgNav3"
+        android:name="io.issc.android_tutorial_kt.FrgNav3"
+        android:label="FrgNav3" >
+        <action
+            android:id="@+id/action_frgNav3_to_frgNav1"
+            app:destination="@id/frgNav1"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_frgNav3_to_frgNav2"
+            app:destination="@id/frgNav2" />
+    </fragment>
+</navigation>
