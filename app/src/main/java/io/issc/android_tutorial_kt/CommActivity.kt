@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
+import android.net.wifi.WifiManager
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -45,6 +46,7 @@ class CommActivity : AppCompatActivity() {
     suspend fun testFun() {
 
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -355,5 +357,13 @@ class CommActivity : AppCompatActivity() {
             }
         }
 
+        val wifiMgr = getSystemService(Context.WIFI_SERVICE) as WifiManager
+        //BroadcastReceiver注册机
+        val intentFilter = IntentFilter()
+        intentFilter.addAction(WifiManager.RSSI_CHANGED_ACTION)
+        registerReceiver(object: BroadcastReceiver() {
+            override fun onReceive(context: Context?, intent: Intent?) {
+            }
+        }, filter)
     }
 }
