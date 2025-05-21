@@ -58,6 +58,8 @@
 
         </activity>
 
+        <service android:name=".MainService"/>
+
     </application>
 
 </manifest>

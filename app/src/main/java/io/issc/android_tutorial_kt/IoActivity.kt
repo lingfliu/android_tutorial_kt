@@ -67,7 +67,7 @@ class IoActivity : AppCompatActivity() {
 
 
         //preferences demo
-        val preferences = getSharedPreferences("io.issc.android_dev_tutorial_kt", MODE_PRIVATE)
+        val preferences = getSharedPreferences("io.issc.android_tutorial_kt", MODE_PRIVATE)
 
         val isFirstOpen = preferences.getBoolean("isFirstOpen", true)
         if (isFirstOpen) {
@@ -90,9 +90,12 @@ class IoActivity : AppCompatActivity() {
 
             Log.d("IoActivity", "user info: " + uinfo.name)
         }.start()
-//        Thread({
-//
-//        }).start()
+
+        Thread({
+            //尽量避免使用Thread
+            //需要显式管理生命周期
+            //阻塞发生，可能会造成泄漏
+        }).start()
 
     }
 }

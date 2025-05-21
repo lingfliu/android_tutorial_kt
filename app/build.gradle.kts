@@ -78,6 +78,6 @@ dependencies {
     implementation(libs.androidx.room.compiler)
     annotationProcessor(libs.androidx.room.compiler)
 
-    implementation("io.ktor:ktor-client-android:1.6.6")
+    implementation(libs.ktor.client.android)
     implementation("io.ktor:ktor-client-gson:1.6.6")
 }
